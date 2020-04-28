@@ -1,0 +1,40 @@
+body {
+    background-color: #ccfeff;
+}
+.buttonleg {
+    background-color: #0099ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 20px 4px 20px;
+    cursor: pointer;
+}
+.buttonstop {
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button==knopka {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 250%;
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
