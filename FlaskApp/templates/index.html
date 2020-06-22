@@ -4,7 +4,7 @@
     <style>
 body {
   background-image: linear-gradient(to bottom, rgba(230, 100, 101, 0.72),
-  rgba(145, 152, 229, 0.5)), url('harold.jpg');;
+  rgba(145, 152, 229, 0.5)),  url({{ url_for ('static', filename = 'harold.jpg') }});
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -70,8 +70,27 @@ body {
     border: 1px solid black;
     transition: background-color .1s linear;
 }
+.buttonmove {
+    background-color: #ff44bb;
+    border: none;
+    color: black;
+    padding: 50px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 25px;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 30px;
+    border: 1px solid black;
+    transition: background-color .1s linear;
+}
 .buttonsrc:hover {
     background-color: #ffccbb;
+}
+.buttonmove:hover {
+    background-color: #000000;
 }
 .buttonstop:hover {
     background-color: #ffcc00;
@@ -128,9 +147,9 @@ h3 {
 <center>
 <h2> R-heh ITMO </h2>
     <form method="POST" action="/">
-                <input type="submit" class="buttonstop" value="Stop" name="stop"/>
-                <input type="submit" class="buttonstop" value="Start roscore"
-                       name="roscore" style="background-color: #00ff00"/>
+                <input type="submit" class="buttonstop" value="kill" name="kill roscore"/>
+                <input type="submit" class="buttonstop" value="roscore"
+                       name="roscore kek" style="background-color: #00ff00"/>
     </form>
 </center>
 <div>
@@ -155,13 +174,14 @@ h3 {
                     </div>
                 </div>
             </form>
-        </div>\\
+        </div>
         <div class="layerlegs" style="max-width: 300px; width: 100%">
-
+            <input type="submit" class="buttonmove" name="subject" value="Move">
         </div>
         <div class="layerlegs">
             <h1 align="center">Run scripts</h1>
-            <input type="submit" class="buttonsrc" name="subject" value="Default">
+            <input type="submit" class="buttonsrc" name="subject" value="set start">
+            <input type="submit" class="buttonsrc" value="stop" name="stop"/>
         </div>
     </div>
 </div>
@@ -173,18 +193,5 @@ h3 {
 <script>
 
 </script>
-<!--
-<h2>R-heh control</h2>
-
-<input type="submit" class="button" value="Scripts"
-                       name="Encrypt" style="position: absolute; top: 200px;"/>
-
-<input type="button" class="button button==knopka" value="Input Button 1">
-<input type="button" class="button" value="Input Button 2">
-
-<input type="button" class="button1" name="dadada" value="Input Button 3"
-       style="background-color: #ffff00; position: absolute; top: 200px" onclick="move_forward()">
-<input type="button" class="button1" value="Input Button 4">
--->
 </body>
 </html>
